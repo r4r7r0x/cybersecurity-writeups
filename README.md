@@ -30,10 +30,13 @@ Currently practicing on HackTheBox and building hands-on skills in:
 
 ## Tools & Technologies
 
-- **Enumeration:** nmap, smbclient
-- **Exploitation:** Metasploit, Impacket
-- **Privilege Escalation:** winPEAS, linPEAS
+- **Enumeration:** nmap, smbclient, Gobuster, enum4linux
+- **Exploitation:** Metasploit, Impacket, php-reverse-shell
+- **Web:** Burp Suite, Firefox DevTools
+- **Privilege Escalation:** winPEAS, linPEAS, strings, find
+- **Post Exploitation:** netcat, psexec.py, mssqlclient.py
 - **Scripting:** Python, Bash
+- **OS:** Parrot OS, Kali Linux
 
 ---
 
