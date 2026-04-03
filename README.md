@@ -24,6 +24,7 @@ Currently practicing on HackTheBox and building hands-on skills in:
 | Machine | OS | Difficulty | Status |
 |---------|----|------------|--------|
 | [Archetype](./HackTheBox/Archetype/writeup.md) | Windows | Easy | ✅ |
+| [Oopsie](./HackTheBox/Oopsie/writeup.md) | Linux | Easy | ✅ |
 
 ---
 
