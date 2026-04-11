@@ -15,6 +15,8 @@ Currently practicing on HackTheBox and building hands-on skills in:
 - Windows/Linux privilege escalation
 - SQL injection and database attacks
 - CVE exploitation
+- Container security
+- File inclusion vulnerabilities
 
 ---
 
@@ -26,6 +28,7 @@ Currently practicing on HackTheBox and building hands-on skills in:
 | [Oopsie](./HackTheBox/Oopsie/writeup.md) | Linux | Easy | ✅ |
 | [Vaccine](./HackTheBox/Vaccine/writeup.md) | Linux | Easy | ✅ |
 | [UniFi](./HackTheBox/UniFi/writeup.md) | Linux | Easy | ✅ |
+| [Included](./HackTheBox/Included/writeup.md) | Linux | Easy | ✅ |
 
 ---
 
@@ -35,9 +38,10 @@ Currently practicing on HackTheBox and building hands-on skills in:
 - **Exploitation:** Metasploit, Impacket, php-reverse-shell, Log4jUnifi
 - **Web:** Burp Suite, Firefox DevTools, sqlmap
 - **Password Cracking:** John The Ripper, Hashcat, openssl
-- **Privilege Escalation:** winPEAS, linPEAS, strings, find, GTFOBins
+- **Privilege Escalation:** winPEAS, linPEAS, strings, find, GTFOBins, LXD
 - **Post Exploitation:** netcat, psexec.py, mssqlclient.py
 - **Databases:** MongoDB, PostgreSQL, MSSQL
+- **Protocols:** SMB, FTP, TFTP, SSH, LDAP
 - **Scripting:** Python, Bash
 - **OS:** Parrot OS, Kali Linux
 
