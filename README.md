@@ -17,6 +17,8 @@ Currently practicing on HackTheBox and building hands-on skills in:
 - CVE exploitation
 - Container security
 - File inclusion vulnerabilities
+- XML injection attacks
+- Password cracking
 
 ---
 
@@ -29,6 +31,7 @@ Currently practicing on HackTheBox and building hands-on skills in:
 | [Vaccine](./HackTheBox/Vaccine/writeup.md) | Linux | Easy | ✅ |
 | [UniFi](./HackTheBox/UniFi/writeup.md) | Linux | Easy | ✅ |
 | [Included](./HackTheBox/Included/writeup.md) | Linux | Easy | ✅ |
+| [Markup](./HackTheBox/Markup/writeup.md) | Windows | Easy | ✅ |
 
 ---
 
@@ -39,11 +42,24 @@ Currently practicing on HackTheBox and building hands-on skills in:
 - **Web:** Burp Suite, Firefox DevTools, sqlmap
 - **Password Cracking:** John The Ripper, Hashcat, openssl
 - **Privilege Escalation:** winPEAS, linPEAS, strings, find, GTFOBins, LXD
-- **Post Exploitation:** netcat, psexec.py, mssqlclient.py
+- **Post Exploitation:** netcat, psexec.py, mssqlclient.py, nc.exe
 - **Databases:** MongoDB, PostgreSQL, MSSQL
 - **Protocols:** SMB, FTP, TFTP, SSH, LDAP
-- **Scripting:** Python, Bash
-- **OS:** Parrot OS, Kali Linux
+- **Scripting:** Python, Bash, PowerShell
+- **OS:** Parrot OS, Kali Linux, Windows
+
+---
+
+## Vulnerabilities Exploited
+
+| Vulnerability | Machine |
+|--------------|---------|
+| SMB Enumeration + MSSQL RCE | Archetype |
+| IDOR + Broken Access Control + File Upload | Oopsie |
+| FTP Anonymous + ZIP Cracking + SQLi | Vaccine |
+| Log4Shell CVE-2021-44228 | UniFi |
+| LFI + TFTP Upload | Included |
+| XXE Injection + SSH Key Theft | Markup |
 
 ---
 
