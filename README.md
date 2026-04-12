@@ -1,77 +1,115 @@
-# 🔐 Cybersecurity Portfolio
+# 🔐 Cybersecurity Portfolio — r4r7r0x
 
-Personal collection of CTF writeups and penetration testing notes.
-Documenting my learning journey through platforms like HackTheBox.
-
----
-
-## About Me
-
-Cybersecurity enthusiast focused on penetration testing and ethical hacking.
-Currently practicing on HackTheBox and building hands-on skills in:
-
-- Network enumeration
-- Web application security
-- Windows/Linux privilege escalation
-- SQL injection and database attacks
-- CVE exploitation
-- Container security
-- File inclusion vulnerabilities
-- XML injection attacks
-- Password cracking
+> Penetration testing writeups and notes documenting my journey 
+> into offensive security through HackTheBox and CTF platforms.
 
 ---
 
-## HackTheBox Writeups
+## 👤 About Me
 
-| Machine | OS | Difficulty | Status |
-|---------|----|------------|--------|
-| [Archetype](./HackTheBox/Archetype/writeup.md) | Windows | Easy | ✅ |
-| [Oopsie](./HackTheBox/Oopsie/writeup.md) | Linux | Easy | ✅ |
-| [Vaccine](./HackTheBox/Vaccine/writeup.md) | Linux | Easy | ✅ |
-| [UniFi](./HackTheBox/UniFi/writeup.md) | Linux | Easy | ✅ |
-| [Included](./HackTheBox/Included/writeup.md) | Linux | Easy | ✅ |
-| [Markup](./HackTheBox/Markup/writeup.md) | Windows | Easy | ✅ |
+I'm a 17-year-old cybersecurity enthusiast from Spain passionate 
+about ethical hacking, penetration testing and red team operations.
+Currently completing HackTheBox Starting Point machines while 
+building a strong foundation for a career in offensive security.
 
----
+**Goals:**
+- eJPT certification — July 2026
+- CompTIA Security+ — 2026/2027
+- OSCP — 2028
 
-## Tools & Technologies
-
-- **Enumeration:** nmap, smbclient, Gobuster, enum4linux
-- **Exploitation:** Metasploit, Impacket, php-reverse-shell, Log4jUnifi
-- **Web:** Burp Suite, Firefox DevTools, sqlmap
-- **Password Cracking:** John The Ripper, Hashcat, openssl
-- **Privilege Escalation:** winPEAS, linPEAS, strings, find, GTFOBins, LXD
-- **Post Exploitation:** netcat, psexec.py, mssqlclient.py, nc.exe
-- **Databases:** MongoDB, PostgreSQL, MSSQL
-- **Protocols:** SMB, FTP, TFTP, SSH, LDAP
-- **Scripting:** Python, Bash, PowerShell
-- **OS:** Parrot OS, Kali Linux, Windows
+**Focus areas:**
+- Penetration Testing
+- Red Team Operations
+- Web Application Security
+- Privilege Escalation
 
 ---
 
-## Vulnerabilities Exploited
+## 📚 HackTheBox Writeups
 
-| Vulnerability | Machine |
-|--------------|---------|
-| SMB Enumeration + MSSQL RCE | Archetype |
-| IDOR + Broken Access Control + File Upload | Oopsie |
-| FTP Anonymous + ZIP Cracking + SQLi | Vaccine |
-| Log4Shell CVE-2021-44228 | UniFi |
-| LFI + TFTP Upload | Included |
-| XXE Injection + SSH Key Theft | Markup |
+### Starting Point — Tier 2 (Complete ✅)
 
----
-
-## Certifications (Planned)
-
-- eJPT — July 2026
-- CompTIA Security+ — During SMR
-- OSCP — During ASIR
+| Machine | OS | Difficulty | Techniques | Status |
+|---------|----|------------|------------|--------|
+| [Archetype](./HackTheBox/Archetype/writeup.md) | Windows | Easy | SMB Enumeration, MSSQL RCE, SeImpersonatePrivilege, winPEAS | ✅ |
+| [Oopsie](./HackTheBox/Oopsie/writeup.md) | Linux | Easy | IDOR, Cookie Manipulation, File Upload, SUID PATH Hijacking | ✅ |
+| [Vaccine](./HackTheBox/Vaccine/writeup.md) | Linux | Easy | FTP Anonymous, ZIP Cracking, SQLi, sudo vi GTFOBins | ✅ |
+| [UniFi](./HackTheBox/UniFi/writeup.md) | Linux | Easy | Log4Shell CVE-2021-44228, JNDI/LDAP, MongoDB Password Reset | ✅ |
+| [Included](./HackTheBox/Included/writeup.md) | Linux | Easy | LFI, TFTP Upload, LXD Container Escape | ✅ |
+| [Markup](./HackTheBox/Markup/writeup.md) | Windows | Easy | XXE Injection, SSH Key Theft, Scheduled Task Abuse | ✅ |
+| [Base](./HackTheBox/Base/writeup.md) | Linux | Easy | PHP Type Juggling, File Upload, sudo find GTFOBins | ✅ |
 
 ---
 
-## Disclaimer
+## 🛠️ Tools & Technologies
 
-All writeups are based on legal lab environments (HackTheBox, TryHackMe).
-This content is for educational purposes only.
+### Enumeration
+- nmap, Gobuster, ffuf, smbclient, enum4linux
+
+### Exploitation
+- Metasploit, Impacket, php-reverse-shell, Log4jUnifi, sqlmap
+
+### Web Security
+- Burp Suite, Firefox DevTools
+
+### Password Cracking
+- John The Ripper, Hashcat, openssl, zip2john
+
+### Privilege Escalation
+- winPEAS, linPEAS, GTFOBins, LXD, SUID abuse
+
+### Post Exploitation
+- netcat, psexec.py, mssqlclient.py, nc.exe
+
+### Databases
+- MongoDB, PostgreSQL, MSSQL
+
+### Protocols
+- SMB, FTP, TFTP, SSH, LDAP, HTTP/HTTPS
+
+### Scripting
+- Python, Bash, PowerShell
+
+---
+
+## 🎯 Vulnerabilities Exploited
+
+| Vulnerability | Description | Machine |
+|--------------|-------------|---------|
+| SMB Enumeration | Sensitive files exposed on SMB share | Archetype |
+| MSSQL xp_cmdshell | OS command execution via SQL Server | Archetype |
+| IDOR | User enumeration via URL parameter | Oopsie |
+| Broken Access Control | Cookie manipulation for admin access | Oopsie |
+| Unrestricted File Upload | PHP shell upload and execution | Oopsie, Base |
+| SUID PATH Hijacking | Fake binary via PATH manipulation | Oopsie |
+| Anonymous FTP | Sensitive backup exposed publicly | Vaccine |
+| SQL Injection | Authenticated SQLi via sqlmap | Vaccine |
+| Log4Shell CVE-2021-44228 | JNDI injection via login field | UniFi |
+| MongoDB Abuse | Admin password reset via database | UniFi |
+| Local File Inclusion | Reading system files via URL parameter | Included |
+| TFTP Upload | Unauthenticated file upload | Included |
+| LXD Privilege Escalation | Container escape to root | Included |
+| XXE Injection | Reading system files via XML | Markup |
+| SSH Key Theft | Private key extracted via XXE | Markup |
+| PHP Type Juggling | strcmp() bypass via array input | Base |
+| sudo Misconfiguration | find/vi allowed as root via sudo | Vaccine, Base |
+
+---
+
+## 📜 Certifications Roadmap
+2026  ──────────────────────────────────────────────────────────
+[July] eJPT
+[Sept] Start SMR (Sistemas Microinformáticos y Redes)
+[Dec]  CompTIA Security+
+2027  ──────────────────────────────────────────────────────────
+Start ASIR (Administración de Sistemas Informáticos)
+2028  ──────────────────────────────────────────────────────────
+OSCP
+
+---
+
+## ⚠️ Disclaimer
+
+All writeups are based on legal lab environments such as HackTheBox.
+This content is strictly for educational purposes.
+Never attempt these techniques on systems without explicit permission.
