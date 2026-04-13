@@ -9,8 +9,8 @@
 
 I'm a 17-year-old cybersecurity enthusiast from Spain passionate 
 about ethical hacking, penetration testing and red team operations.
-Currently completing HackTheBox Starting Point machines while 
-building a strong foundation for a career in offensive security.
+Currently completing HackTheBox machines while building a strong 
+foundation for a career in offensive security.
 
 **Goals:**
 - eJPT certification — July 2026
@@ -29,15 +29,21 @@ building a strong foundation for a career in offensive security.
 
 ### Starting Point — Tier 2 (Complete ✅)
 
-| Machine | OS | Difficulty | Techniques | Status |
-|---------|----|------------|------------|--------|
-| [Archetype](./HackTheBox/Archetype/writeup.md) | Windows | Easy | SMB Enumeration, MSSQL RCE, SeImpersonatePrivilege, winPEAS | ✅ |
-| [Oopsie](./HackTheBox/Oopsie/writeup.md) | Linux | Easy | IDOR, Cookie Manipulation, File Upload, SUID PATH Hijacking | ✅ |
-| [Vaccine](./HackTheBox/Vaccine/writeup.md) | Linux | Easy | FTP Anonymous, ZIP Cracking, SQLi, sudo vi GTFOBins | ✅ |
-| [UniFi](./HackTheBox/UniFi/writeup.md) | Linux | Easy | Log4Shell CVE-2021-44228, JNDI/LDAP, MongoDB Password Reset | ✅ |
-| [Included](./HackTheBox/Included/writeup.md) | Linux | Easy | LFI, TFTP Upload, LXD Container Escape | ✅ |
-| [Markup](./HackTheBox/Markup/writeup.md) | Windows | Easy | XXE Injection, SSH Key Theft, Scheduled Task Abuse | ✅ |
-| [Base](./HackTheBox/Base/writeup.md) | Linux | Easy | PHP Type Juggling, File Upload, sudo find GTFOBins | ✅ |
+| # | Machine | OS | Difficulty | Techniques | Writeup |
+|---|---------|-----|------------|------------|---------|
+| 1 | Archetype | Windows | Easy | SMB Enumeration, MSSQL RCE, SeImpersonatePrivilege, winPEAS | [📄 Read](./HackTheBox/Archetype/writeup.md) |
+| 2 | Oopsie | Linux | Easy | IDOR, Cookie Manipulation, File Upload, SUID PATH Hijacking | [📄 Read](./HackTheBox/Oopsie/writeup.md) |
+| 3 | Vaccine | Linux | Easy | FTP Anonymous, ZIP Cracking, SQLi, sudo vi GTFOBins | [📄 Read](./HackTheBox/Vaccine/writeup.md) |
+| 4 | UniFi | Linux | Easy | Log4Shell CVE-2021-44228, JNDI/LDAP, MongoDB Password Reset | [📄 Read](./HackTheBox/UniFi/writeup.md) |
+| 5 | Included | Linux | Easy | LFI, TFTP Upload, LXD Container Escape | [📄 Read](./HackTheBox/Included/writeup.md) |
+| 6 | Markup | Windows | Easy | XXE Injection, SSH Key Theft, Scheduled Task Abuse | [📄 Read](./HackTheBox/Markup/writeup.md) |
+| 7 | Base | Linux | Easy | PHP Type Juggling, File Upload, sudo find GTFOBins | [📄 Read](./HackTheBox/Base/writeup.md) |
+
+### Active Machines
+
+| # | Machine | OS | Difficulty | Techniques | Writeup |
+|---|---------|-----|------------|------------|---------|
+| 8 | Lame | Linux | Easy | CVE-2007-2447, Samba RCE, Metasploit, Rabbit Hole | [📄 Read](./HackTheBox/Lame/writeup.md) |
 
 ---
 
@@ -93,6 +99,7 @@ building a strong foundation for a career in offensive security.
 | SSH Key Theft | Private key extracted via XXE | Markup |
 | PHP Type Juggling | strcmp() bypass via array input | Base |
 | sudo Misconfiguration | find/vi allowed as root via sudo | Vaccine, Base |
+| CVE-2007-2447 | Samba username map script RCE | Lame |
 
 ---
 
