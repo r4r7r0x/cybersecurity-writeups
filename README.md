@@ -1,6 +1,3 @@
-Aquí tienes el README actualizado con todas las máquinas:
-markdown
-
 # 🔐 Cybersecurity Portfolio — r4r7r0x
 
 > Penetration testing writeups and notes documenting my journey 
@@ -48,6 +45,7 @@ foundation for a career in offensive security.
 |---|---------|-----|------------|------------|---------|
 | 8 | Lame | Linux | Easy | CVE-2007-2447, Samba RCE, Metasploit | [📄 Read](./HackTheBox/Lame/writeup.md) |
 | 9 | Blue | Windows | Easy | MS17-010 EternalBlue, Metasploit, SMB | [📄 Read](./HackTheBox/Blue/writeup.md) |
+| 10 | Legacy | Windows | Easy | MS08-067 CVE-2008-4250, MS17-010, Metasploit | [📄 Read](./HackTheBox/Legacy/writeup.md) |
 
 ---
 
@@ -105,22 +103,19 @@ foundation for a career in offensive security.
 | sudo Misconfiguration | find/vi allowed as root via sudo | Vaccine, Base |
 | CVE-2007-2447 | Samba username map script RCE | Lame |
 | MS17-010 EternalBlue | SMBv1 remote code execution | Blue |
+| MS08-067 CVE-2008-4250 | SMB remote code execution | Legacy |
 
 ---
 
 ## 📜 Certifications Roadmap
-
 2026  ──────────────────────────────────────────────────────────
 [July] eJPT
 [Sept] Start SMR (Sistemas Microinformáticos y Redes)
 [Dec]  CompTIA Security+
-
 2027  ──────────────────────────────────────────────────────────
 Start ASIR (Administración de Sistemas Informáticos)
-
 2028  ──────────────────────────────────────────────────────────
 OSCP
-
 
 ---
 
