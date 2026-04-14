@@ -1,3 +1,6 @@
+Aquí tienes el README actualizado con todas las máquinas:
+markdown
+
 # 🔐 Cybersecurity Portfolio — r4r7r0x
 
 > Penetration testing writeups and notes documenting my journey 
@@ -43,7 +46,8 @@ foundation for a career in offensive security.
 
 | # | Machine | OS | Difficulty | Techniques | Writeup |
 |---|---------|-----|------------|------------|---------|
-| 8 | Lame | Linux | Easy | CVE-2007-2447, Samba RCE, Metasploit, Rabbit Hole | [📄 Read](./HackTheBox/Lame/writeup.md) |
+| 8 | Lame | Linux | Easy | CVE-2007-2447, Samba RCE, Metasploit | [📄 Read](./HackTheBox/Lame/writeup.md) |
+| 9 | Blue | Windows | Easy | MS17-010 EternalBlue, Metasploit, SMB | [📄 Read](./HackTheBox/Blue/writeup.md) |
 
 ---
 
@@ -100,18 +104,23 @@ foundation for a career in offensive security.
 | PHP Type Juggling | strcmp() bypass via array input | Base |
 | sudo Misconfiguration | find/vi allowed as root via sudo | Vaccine, Base |
 | CVE-2007-2447 | Samba username map script RCE | Lame |
+| MS17-010 EternalBlue | SMBv1 remote code execution | Blue |
 
 ---
 
 ## 📜 Certifications Roadmap
+
 2026  ──────────────────────────────────────────────────────────
 [July] eJPT
 [Sept] Start SMR (Sistemas Microinformáticos y Redes)
 [Dec]  CompTIA Security+
+
 2027  ──────────────────────────────────────────────────────────
 Start ASIR (Administración de Sistemas Informáticos)
+
 2028  ──────────────────────────────────────────────────────────
 OSCP
+
 
 ---
 
