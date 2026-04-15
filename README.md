@@ -46,6 +46,7 @@ foundation for a career in offensive security.
 | 8 | Lame | Linux | Easy | CVE-2007-2447, Samba RCE, Metasploit | [📄 Read](./HackTheBox/Lame/writeup.md) |
 | 9 | Blue | Windows | Easy | MS17-010 EternalBlue, Metasploit, SMB | [📄 Read](./HackTheBox/Blue/writeup.md) |
 | 10 | Legacy | Windows | Easy | MS08-067 CVE-2008-4250, MS17-010, Metasploit | [📄 Read](./HackTheBox/Legacy/writeup.md) |
+| 11 | Devel | Windows | Easy | Anonymous FTP, ASPX Shell, MS10-015 KiTrap0D | [📄 Read](./HackTheBox/Devel/writeup.md) |
 
 ---
 
@@ -55,7 +56,7 @@ foundation for a career in offensive security.
 - nmap, Gobuster, ffuf, smbclient, enum4linux
 
 ### Exploitation
-- Metasploit, Impacket, php-reverse-shell, Log4jUnifi, sqlmap
+- Metasploit, Impacket, php-reverse-shell, Log4jUnifi, sqlmap, msfvenom
 
 ### Web Security
 - Burp Suite, Firefox DevTools
@@ -64,7 +65,7 @@ foundation for a career in offensive security.
 - John The Ripper, Hashcat, openssl, zip2john
 
 ### Privilege Escalation
-- winPEAS, linPEAS, GTFOBins, LXD, SUID abuse
+- winPEAS, linPEAS, GTFOBins, LXD, SUID abuse, local_exploit_suggester
 
 ### Post Exploitation
 - netcat, psexec.py, mssqlclient.py, nc.exe
@@ -88,9 +89,9 @@ foundation for a career in offensive security.
 | MSSQL xp_cmdshell | OS command execution via SQL Server | Archetype |
 | IDOR | User enumeration via URL parameter | Oopsie |
 | Broken Access Control | Cookie manipulation for admin access | Oopsie |
-| Unrestricted File Upload | PHP shell upload and execution | Oopsie, Base |
+| Unrestricted File Upload | PHP shell upload and execution | Oopsie, Base, Devel |
 | SUID PATH Hijacking | Fake binary via PATH manipulation | Oopsie |
-| Anonymous FTP | Sensitive backup exposed publicly | Vaccine |
+| Anonymous FTP | Sensitive files exposed publicly | Vaccine, Devel |
 | SQL Injection | Authenticated SQLi via sqlmap | Vaccine |
 | Log4Shell CVE-2021-44228 | JNDI injection via login field | UniFi |
 | MongoDB Abuse | Admin password reset via database | UniFi |
@@ -104,6 +105,8 @@ foundation for a career in offensive security.
 | CVE-2007-2447 | Samba username map script RCE | Lame |
 | MS17-010 EternalBlue | SMBv1 remote code execution | Blue |
 | MS08-067 CVE-2008-4250 | SMB remote code execution | Legacy |
+| MS10-015 KiTrap0D | Windows kernel privilege escalation | Devel |
+| FTP/Web Shared Root | Uploaded files executable via web | Devel |
 
 ---
 
@@ -123,4 +126,4 @@ OSCP
 
 All writeups are based on legal lab environments such as HackTheBox.
 This content is strictly for educational purposes.
-Never attempt these techniques on systems without explicit permission.
+Never attempt these techniques on systems without explicit permission
