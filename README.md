@@ -47,6 +47,8 @@ foundation for a career in offensive security.
 | 9 | Blue | Windows | Easy | MS17-010 EternalBlue, Metasploit, SMB | [📄 Read](./HackTheBox/Blue/writeup.md) |
 | 10 | Legacy | Windows | Easy | MS08-067 CVE-2008-4250, MS17-010, Metasploit | [📄 Read](./HackTheBox/Legacy/writeup.md) |
 | 11 | Devel | Windows | Easy | Anonymous FTP, ASPX Shell, MS10-015 KiTrap0D | [📄 Read](./HackTheBox/Devel/writeup.md) |
+| 12 | Bashed | Linux | Easy | Webshell, sudo Escalation, Cronjob Abuse | [📄 Read](./HackTheBox/Bashed/writeup.md) |
+| 13 | Shocker | Linux | Easy | Shellshock CVE-2014-6271, CGI Exploitation, sudo perl | [📄 Read](./HackTheBox/Shocker/writeup.md) |
 
 ---
 
@@ -101,12 +103,15 @@ foundation for a career in offensive security.
 | XXE Injection | Reading system files via XML | Markup |
 | SSH Key Theft | Private key extracted via XXE | Markup |
 | PHP Type Juggling | strcmp() bypass via array input | Base |
-| sudo Misconfiguration | find/vi allowed as root via sudo | Vaccine, Base |
+| sudo Misconfiguration | find/vi/perl allowed as root via sudo | Vaccine, Base, Shocker |
 | CVE-2007-2447 | Samba username map script RCE | Lame |
 | MS17-010 EternalBlue | SMBv1 remote code execution | Blue |
 | MS08-067 CVE-2008-4250 | SMB remote code execution | Legacy |
 | MS10-015 KiTrap0D | Windows kernel privilege escalation | Devel |
 | FTP/Web Shared Root | Uploaded files executable via web | Devel |
+| Exposed Webshell | phpbash accessible via hidden directory | Bashed |
+| Cronjob Abuse | Writable script executed as root | Bashed |
+| Shellshock CVE-2014-6271 | RCE via bash CGI script | Shocker |
 
 ---
 
@@ -126,4 +131,4 @@ OSCP
 
 All writeups are based on legal lab environments such as HackTheBox.
 This content is strictly for educational purposes.
-Never attempt these techniques on systems without explicit permission
+Never attempt these techniques on systems without explicit permission.
