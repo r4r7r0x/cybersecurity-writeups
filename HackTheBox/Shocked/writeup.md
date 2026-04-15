@@ -20,7 +20,7 @@ permissions on perl.
 
 Port scan using nmap:
 
-```bashnmap -Pn -sCV -p- --top-ports 1000 -T3 10.10.10.56
+``bashnmap -Pn -sCV -p- --top-ports 1000 -T3 10.10.10.56''
 
 **Open ports:**
 
