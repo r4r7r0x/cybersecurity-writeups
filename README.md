@@ -49,6 +49,7 @@ foundation for a career in offensive security.
 | 11 | Devel | Windows | Easy | Anonymous FTP, ASPX Shell, MS10-015 KiTrap0D | [📄 Read](./HackTheBox/Devel/writeup.md) |
 | 12 | Bashed | Linux | Easy | Webshell, sudo Escalation, Cronjob Abuse | [📄 Read](./HackTheBox/Bashed/writeup.md) |
 | 13 | Shocker | Linux | Easy | Shellshock CVE-2014-6271, CGI Exploitation, sudo perl | [📄 Read](./HackTheBox/Shocker/writeup.md) |
+| 14 | Knife | Linux | Easy | PHP 8.1.0-dev Backdoor, sudo knife GTFOBins | [📄 Read](./HackTheBox/Knife/writeup.md) |
 
 ---
 
@@ -58,7 +59,7 @@ foundation for a career in offensive security.
 - nmap, Gobuster, ffuf, smbclient, enum4linux
 
 ### Exploitation
-- Metasploit, Impacket, php-reverse-shell, Log4jUnifi, sqlmap, msfvenom
+- Metasploit, Impacket, php-reverse-shell, Log4jUnifi, sqlmap, msfvenom, curl
 
 ### Web Security
 - Burp Suite, Firefox DevTools
@@ -103,7 +104,7 @@ foundation for a career in offensive security.
 | XXE Injection | Reading system files via XML | Markup |
 | SSH Key Theft | Private key extracted via XXE | Markup |
 | PHP Type Juggling | strcmp() bypass via array input | Base |
-| sudo Misconfiguration | find/vi/perl allowed as root via sudo | Vaccine, Base, Shocker |
+| sudo Misconfiguration | find/vi/perl/knife allowed as root | Vaccine, Base, Shocker, Knife |
 | CVE-2007-2447 | Samba username map script RCE | Lame |
 | MS17-010 EternalBlue | SMBv1 remote code execution | Blue |
 | MS08-067 CVE-2008-4250 | SMB remote code execution | Legacy |
@@ -112,6 +113,7 @@ foundation for a career in offensive security.
 | Exposed Webshell | phpbash accessible via hidden directory | Bashed |
 | Cronjob Abuse | Writable script executed as root | Bashed |
 | Shellshock CVE-2014-6271 | RCE via bash CGI script | Shocker |
+| PHP 8.1.0-dev Backdoor | RCE via User-Agentt zerodium header | Knife |
 
 ---
 
@@ -130,5 +132,7 @@ OSCP
 ## ⚠️ Disclaimer
 
 All writeups are based on legal lab environments such as HackTheBox.
+This content is strictly for educational purposes.
+Never attempt these techniques on systems without explicit permission.ironments such as HackTheBox.
 This content is strictly for educational purposes.
 Never attempt these techniques on systems without explicit permission.
