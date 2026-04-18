@@ -22,7 +22,7 @@ Port scan using nmap:
 
 ```bash
 nmap -p- --open -sS --min-rate 5000 -vvv -Pn 10.10.10.75 -oG allPorts
-nmap -sCV -p22,80 -oN targeted
+nmap -sCV -p22,80 (IP) -oN targeted
 ```
 
 **Open ports:**
