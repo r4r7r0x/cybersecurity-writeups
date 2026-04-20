@@ -51,6 +51,8 @@ foundation for a career in offensive security.
 | 13 | Shocker | Linux | Easy | Shellshock CVE-2014-6271, CGI Exploitation, sudo perl | [📄 Read](./HackTheBox/Shocker/writeup.md) |
 | 14 | Knife | Linux | Easy | PHP 8.1.0-dev Backdoor, sudo knife GTFOBins | [📄 Read](./HackTheBox/Knife/writeup.md) |
 | 15 | Nibbles | Linux | Easy | CVE-2015-6967, Nibbleblog File Upload, sudo Script Abuse | [📄 Read](./HackTheBox/Nibbles/writeup.md) |
+| 16 | Grandpa | Windows | Easy | CVE-2017-7269, IIS 6.0 WebDAV, SeImpersonatePrivilege, churrasco | [📄 Read](./HackTheBox/Grandpa/writeup.md) |
+| 17 | Granny | Windows | Easy | CVE-2017-7269, IIS 6.0 WebDAV, SeImpersonatePrivilege, churrasco | [📄 Read](./HackTheBox/Granny/writeup.md) |
 
 ---
 
@@ -69,16 +71,16 @@ foundation for a career in offensive security.
 - John The Ripper, Hashcat, openssl, zip2john
 
 ### Privilege Escalation
-- winPEAS, linPEAS, GTFOBins, LXD, SUID abuse, local_exploit_suggester
+- winPEAS, linPEAS, GTFOBins, LXD, SUID abuse, churrasco, local_exploit_suggester
 
 ### Post Exploitation
-- netcat, psexec.py, mssqlclient.py, nc.exe
+- netcat, psexec.py, mssqlclient.py, nc.exe, impacket-smbserver
 
 ### Databases
 - MongoDB, PostgreSQL, MSSQL
 
 ### Protocols
-- SMB, FTP, TFTP, SSH, LDAP, HTTP/HTTPS
+- SMB, FTP, TFTP, SSH, LDAP, HTTP/HTTPS, WebDAV
 
 ### Scripting
 - Python, Bash, PowerShell
@@ -117,6 +119,8 @@ foundation for a career in offensive security.
 | PHP 8.1.0-dev Backdoor | RCE via User-Agentt zerodium header | Knife |
 | CVE-2015-6967 | Nibbleblog authenticated file upload RCE | Nibbles |
 | Default Credentials | admin:nibbles accepted | Nibbles |
+| CVE-2017-7269 | IIS 6.0 WebDAV remote buffer overflow | Grandpa, Granny |
+| SeImpersonatePrivilege | Token impersonation via churrasco | Grandpa, Granny |
 
 ---
 
@@ -129,11 +133,3 @@ foundation for a career in offensive security.
 Start ASIR (Administración de Sistemas Informáticos)
 2028  ──────────────────────────────────────────────────────────
 OSCP
-
----
-
-## ⚠️ Disclaimer
-
-All writeups are based on legal lab environments such as HackTheBox.
-This content is strictly for educational purposes.
-Never attempt these techniques on systems without explicit permission.
