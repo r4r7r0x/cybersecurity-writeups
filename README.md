@@ -1,3 +1,4 @@
+
 # 🔐 Cybersecurity Portfolio — r4r7r0x
 
 > Penetration testing writeups and notes documenting my journey 
@@ -53,13 +54,14 @@ foundation for a career in offensive security.
 | 15 | Nibbles | Linux | Easy | CVE-2015-6967, Nibbleblog File Upload, sudo Script Abuse | [📄 Read](./HackTheBox/Nibbles/writeup.md) |
 | 16 | Grandpa | Windows | Easy | CVE-2017-7269, IIS 6.0 WebDAV, SeImpersonatePrivilege, churrasco | [📄 Read](./HackTheBox/Grandpa/writeup.md) |
 | 17 | Granny | Windows | Easy | CVE-2017-7269, IIS 6.0 WebDAV, SeImpersonatePrivilege, churrasco | [📄 Read](./HackTheBox/Granny/writeup.md) |
+| 18 | SolidState | Linux | Medium | Default Credentials, POP3 Email Enumeration, rbash Escape, Cronjob Abuse | [📄 Read](./HackTheBox/SolidState/writeup.md) |
 
 ---
 
 ## 🛠️ Tools & Technologies
 
 ### Enumeration
-- nmap, Gobuster, ffuf, wfuzz, smbclient, enum4linux, Wappalyzer
+- nmap, Gobuster, ffuf, wfuzz, smbclient, enum4linux, Nikto, Wappalyzer
 
 ### Exploitation
 - Metasploit, Impacket, php-reverse-shell, Log4jUnifi, sqlmap, msfvenom, curl
@@ -74,13 +76,13 @@ foundation for a career in offensive security.
 - winPEAS, linPEAS, GTFOBins, LXD, SUID abuse, churrasco, local_exploit_suggester
 
 ### Post Exploitation
-- netcat, psexec.py, mssqlclient.py, nc.exe, impacket-smbserver
+- netcat, telnet, psexec.py, mssqlclient.py, nc.exe, impacket-smbserver
 
 ### Databases
 - MongoDB, PostgreSQL, MSSQL
 
 ### Protocols
-- SMB, FTP, TFTP, SSH, LDAP, HTTP/HTTPS, WebDAV
+- SMB, FTP, TFTP, SSH, LDAP, HTTP/HTTPS, WebDAV, SMTP, POP3
 
 ### Scripting
 - Python, Bash, PowerShell
@@ -114,22 +116,37 @@ foundation for a career in offensive security.
 | MS10-015 KiTrap0D | Windows kernel privilege escalation | Devel |
 | FTP/Web Shared Root | Uploaded files executable via web | Devel |
 | Exposed Webshell | phpbash accessible via hidden directory | Bashed |
-| Cronjob Abuse | Writable script executed as root | Bashed |
+| Cronjob Abuse | Writable script executed as root | Bashed, SolidState |
 | Shellshock CVE-2014-6271 | RCE via bash CGI script | Shocker |
 | PHP 8.1.0-dev Backdoor | RCE via User-Agentt zerodium header | Knife |
 | CVE-2015-6967 | Nibbleblog authenticated file upload RCE | Nibbles |
-| Default Credentials | admin:nibbles accepted | Nibbles |
+| Default Credentials | admin:nibbles / root:root accepted | Nibbles, SolidState |
 | CVE-2017-7269 | IIS 6.0 WebDAV remote buffer overflow | Grandpa, Granny |
 | SeImpersonatePrivilege | Token impersonation via churrasco | Grandpa, Granny |
+| Information Disclosure | SSH credentials exposed in email | SolidState |
+| rbash Escape | Restricted shell bypass via script | SolidState |
 
 ---
 
 ## 📜 Certifications Roadmap
+
+```
 2026  ──────────────────────────────────────────────────────────
-[July] eJPT
-[Sept] Start SMR (Sistemas Microinformáticos y Redes)
-[Dec]  CompTIA Security+
+         [July] eJPT
+         [Sept] Start SMR (Sistemas Microinformáticos y Redes)
+         [Dec]  CompTIA Security+
+
 2027  ──────────────────────────────────────────────────────────
-Start ASIR (Administración de Sistemas Informáticos)
+         Start ASIR (Administración de Sistemas Informáticos)
+
 2028  ──────────────────────────────────────────────────────────
-OSCP
+         OSCP
+```
+
+---
+
+## ⚠️ Disclaimer
+
+All writeups are based on legal lab environments such as HackTheBox.
+This content is strictly for educational purposes.
+Never attempt these techniques on systems without explicit permission.
