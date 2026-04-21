@@ -1,4 +1,4 @@
-Aquí tienes el writeup de SolidState en inglés profesional:
+
 
 # SolidState
 
