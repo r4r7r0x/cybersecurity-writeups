@@ -1,0 +1,60 @@
+# SolidState
+
+**Platform:** HackTheBox  
+**OS:** Linux (Debian 9)  
+**Difficulty:** Medium  
+**Date:** April 2026
+
+---
+
+## Summary
+
+Linux machine running Apache James 2.3.2, a mail server with a 
+remote administration interface accessible on port 4555 with default 
+credentials. Admin access allows resetting user passwords and reading 
+emails via POP3, revealing SSH credentials for mindy. Initial shell 
+is restricted (rbash) but escapable. Privilege escalation via a 
+world-writable Python script executed by a root cronjob.
+
+---
+
+## 1. Reconnaissance
+
+Full port scan:
+
+```bash
+nmap -p- --open -sS --min-rate 5000 -vvv -Pn 10.10.10.51 -oG allPorts
+```
+
+TTL=63 confirms Linux target.
+
+**Open ports:**
+
+| Port | Service |
+|------|---------|
+| 22 | SSH OpenSSH |
+| 25 | SMTP James 2.3.2 |
+| 80 | HTTP Apache 2.4.25 |
+| 110 | POP3 James 2.3.2 |
+| 119 | NNTP |
+| 4555 | Apache James Remote Admin 2.3.2 |
+
+Detailed scan:
+
+```bash
+nmap -sCV -Pn -p22,25,80,110,119,4555 10.10.10.51 -oN targeted
+```
+
+---
+
+## 2. James Admin Access — Port 4555
+
+Connected to the James administration interface:
+
+```bash
+nc -nv 10.10.10.51 4555
+```
+
+Authenticated with default credentials:
+Login id: root
+Password: root
