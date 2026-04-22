@@ -89,6 +89,10 @@ Focus: fundamentals of enumeration and basic exploitation.
 - Grandpa
 - Granny
 - Markup
+- Unifi
+-Shocker
+-Vaccine
+-Knife
 
 ---
 
@@ -96,11 +100,7 @@ Focus: fundamentals of enumeration and basic exploitation.
 
 Focus: chaining vulnerabilities and deeper service exploitation.
 
-- Shocker
 - SolidState
-- Unifi
-- Vaccine
-- Knife
 - Bastard
 
 ---
