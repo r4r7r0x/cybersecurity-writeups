@@ -52,8 +52,36 @@ Custom tool implementing ARP spoofing techniques for understanding LAN-level att
 Key objectives:
 - Understand ARP protocol behavior
 - Simulate traffic interception in local networks
-- Study packet redirection mechanisms
+- Study packet redirection mechanisms# 
 
+Aurora Recon Framework
+
+Automated reconnaissance framework for penetration testing and CTF environments.
+
+It structures initial enumeration into a repeatable, fast and modular workflow, producing both raw outputs and a structured report for analysis.
+
+> Authorized use only.
+
+---
+
+## Overview
+
+Aurora automates the early reconnaissance phase:
+
+- Network scanning (Nmap)
+- Service identification & mapping
+- Module-based enumeration (HTTP, SMB, SSH, etc.)
+- Structured workspace per target
+- Manual analyst input via loot system
+
+Each execution is fully isolated and reproducible.
+
+---
+
+## Usage
+
+```bash
+python3 aurora.py -t <IP> [options]
 ---
 
 ### 🔎 Recon Scanner (WIP)
