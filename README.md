@@ -54,7 +54,8 @@ foundation for a career in offensive security.
 | 15 | Nibbles | Linux | Easy | CVE-2015-6967, Nibbleblog File Upload, sudo Script Abuse | [📄 Read](./HackTheBox/Nibbles/writeup.md) |
 | 16 | Grandpa | Windows | Easy | CVE-2017-7269, IIS 6.0 WebDAV, SeImpersonatePrivilege, churrasco | [📄 Read](./HackTheBox/Grandpa/writeup.md) |
 | 17 | Granny | Windows | Easy | CVE-2017-7269, IIS 6.0 WebDAV, SeImpersonatePrivilege, churrasco | [📄 Read](./HackTheBox/Granny/writeup.md) |
-| 18 | SolidState | Linux | Medium | Default Credentials, POP3 Email Enumeration, rbash Escape, Cronjob Abuse | [📄 Read](./HackTheBox/SolidState/writeup.md) |
+| 18 | SolidState | Linux | Medium | Default Credentials, POP3 Enumeration, rbash Escape, Cronjob Abuse | [📄 Read](./HackTheBox/SolidState/writeup.md) |
+| 19 | Bastard | Windows | Medium | CVE-2018-7600 Drupalgeddon2, SeImpersonatePrivilege, JuicyPotato | [📄 Read](./HackTheBox/Bastard/writeup.md) |
 
 ---
 
@@ -73,7 +74,7 @@ foundation for a career in offensive security.
 - John The Ripper, Hashcat, openssl, zip2john
 
 ### Privilege Escalation
-- winPEAS, linPEAS, GTFOBins, LXD, SUID abuse, churrasco, local_exploit_suggester
+- winPEAS, linPEAS, GTFOBins, LXD, SUID abuse, churrasco, JuicyPotato, local_exploit_suggester
 
 ### Post Exploitation
 - netcat, telnet, psexec.py, mssqlclient.py, nc.exe, impacket-smbserver
@@ -120,28 +121,28 @@ foundation for a career in offensive security.
 | Shellshock CVE-2014-6271 | RCE via bash CGI script | Shocker |
 | PHP 8.1.0-dev Backdoor | RCE via User-Agentt zerodium header | Knife |
 | CVE-2015-6967 | Nibbleblog authenticated file upload RCE | Nibbles |
-| Default Credentials | admin:nibbles / root:root accepted | Nibbles, SolidState |
+| Default Credentials | Various default credentials accepted | Nibbles, SolidState |
 | CVE-2017-7269 | IIS 6.0 WebDAV remote buffer overflow | Grandpa, Granny |
-| SeImpersonatePrivilege | Token impersonation via churrasco | Grandpa, Granny |
-| Information Disclosure | SSH credentials exposed in email | SolidState |
+| SeImpersonatePrivilege | Token impersonation via churrasco/JuicyPotato | Grandpa, Granny, Bastard |
+| Information Disclosure | SSH credentials in email / version in changelog | SolidState, Bastard |
 | rbash Escape | Restricted shell bypass via script | SolidState |
+| CVE-2018-7600 Drupalgeddon2 | Unauthenticated RCE in Drupal 7.54 | Bastard |
 
 ---
 
 ## 📜 Certifications Roadmap
 
-```
 2026  ──────────────────────────────────────────────────────────
-         [July] eJPT
-         [Sept] Start SMR (Sistemas Microinformáticos y Redes)
-         [Dec]  CompTIA Security+
+[July] eJPT
+[Sept] Start SMR (Sistemas Microinformáticos y Redes)
+[Dec]  CompTIA Security+
 
 2027  ──────────────────────────────────────────────────────────
-         Start ASIR (Administración de Sistemas Informáticos)
+Start ASIR (Administración de Sistemas Informáticos)
 
 2028  ──────────────────────────────────────────────────────────
-         OSCP
-```
+OSCP
+
 
 ---
 
@@ -150,3 +151,5 @@ foundation for a career in offensive security.
 All writeups are based on legal lab environments such as HackTheBox.
 This content is strictly for educational purposes.
 Never attempt these techniques on systems without explicit permission.
+
+Pégalo en el README.md y haz commit con el mensaje Update README - Add Bastard. 🔥
