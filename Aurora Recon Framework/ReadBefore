@@ -1,0 +1,23 @@
+## Aurora Recon Framework
+
+Automated recon tool for CTF/pentest labs. Authorized use only.
+
+## Usage
+python3 aurora.py -t <IP> [--fast|--full] [--htb] [--silent]
+
+## Flags
+-t / --target     Target IP
+--fast            Top 100 ports
+--full            All 65535 ports  
+--htb             HTB mode (SecLists wordlist, shorter timeout)
+--quick           Nmap only, skip modules
+--silent          No output (for scripting)
+--notes "text"    Add notes to report (repeatable)
+-o                Output directory
+
+## Output
+aurora_<IP>_<timestamp>/
+├── nmap.txt
+├── http_<port>.txt
+├── smb.txt / ssh_<port>.txt
+└── report.json
