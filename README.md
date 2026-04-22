@@ -1,119 +1,132 @@
 
-# ⚔️ r4r7r0x | Offensive Security
+# r4r7r0x | Offensive Security Portfolio
 
-> Pentesting student focused on real-world attack methodology  
-> Hack The Box player | Tool developer | Linux user
-
----
-
-## 🧠 Mindset
-
-I don't just solve machines — I break them down, understand them, and automate the process.
-
-Focused on:
-- Realistic attack paths
-- Enumeration-first mindset
-- Manual + automated exploitation
-- Thinking like an attacker, not a script user
+Cybersecurity student focused on penetration testing, network exploitation, and offensive security tooling.
 
 ---
 
-## ⚡ Tech Stack
+## 🧠 Profile Summary
 
-### 🐧 Systems
+I focus on understanding systems from an attacker’s perspective, combining manual exploitation techniques with automation to improve reconnaissance and attack efficiency.
+
+Main interests:
+- Network exploitation (ARP, MITM, LAN attacks)
+- Web application security
+- Privilege escalation (Linux & Windows)
+- Security tool development and automation
+
+---
+
+## 🧰 Technical Skills
+
+### Operating Systems
 - Parrot OS
 - Kali Linux
 
-### 🔍 Enumeration
+### Reconnaissance & Enumeration
 - Nmap
 - Gobuster
 - Netcat
-- Enum scripts
 
-### 💥 Exploitation
+### Exploitation
 - SQL Injection
-- File Inclusion (LFI/RFI)
-- RCE
-- Misconfigurations
+- LFI / RFI
+- Remote Code Execution (RCE)
+- Service misconfigurations
 
-### 🔑 Privilege Escalation
-- Linux privesc (SUID, sudo, cron, capabilities)
-- Windows privesc (services, registry, tokens)
+### Privilege Escalation
+- Linux: SUID, sudo rules, cron jobs, capabilities
+- Windows: services, weak permissions, token abuse
 
-### 🧰 Tools
-- Metasploit
-- Burp Suite
-- Wireshark
-
-### 💻 Scripting
-- Bash (active)
-- Python (learning)
+### Scripting & Tools
+- Python (security automation)
+- Bash (basic tooling & automation)
 
 ---
 
-## 🛠️ Projects (Most Important Part)
+## 🛠️ Projects
 
-### 🔎 Custom Recon Scanner (WIP)
+### 🔧 ARP Spoofing Tool
+Custom tool implementing ARP spoofing techniques for understanding LAN-level attacks and MITM scenarios.
 
-> Automated enumeration tool built from scratch
+Key objectives:
+- Understand ARP protocol behavior
+- Simulate traffic interception in local networks
+- Study packet redirection mechanisms
 
-Features:
-- Port scanning
+---
+
+### 🔎 Recon Scanner (WIP)
+Automation tool for initial enumeration in penetration testing workflows.
+
+Planned features:
+- Port scanning automation
 - Service detection
-- Auto-enumeration based on service
-- Clean output
-
-Goal:
-> Replace manual recon workflow with a smart pipeline
+- Context-based enumeration logic (HTTP/SMB/FTP)
+- Faster HTB-style recon workflow
 
 ---
 
-## 🧩 Hack The Box
+## 📁 Hack The Box Writeups
 
-📂 Full writeups → [cybersecurity-writeups](./cybersecurity-writeups)
+Structured collection of machines solved on Hack The Box, focused on learning exploitation paths and privilege escalation techniques.
 
-Machines solved:
+---
+
+## 🟢 Easy Machines
+
+Focus: fundamentals of enumeration and basic exploitation.
+
+- Oopsie
 - Lame
+- Legacy
+- Nibbles
+- Archetype
 - Blue
 - Devel
-- Cap
-- Forest
-- Knife
-- Shocker
-- Horizontall
-- Sauna
-- Netmon
 - Bashed
-- Included
+- Include
+- Grandpa
+- Granny
+- Markup
+
+---
+
+## 🟡 Medium Machines
+
+Focus: chaining vulnerabilities and deeper service exploitation.
+
+- Shocker
+- SolidState
+- Unifi
+- Vaccine
+- Knife
+- Bastard
 
 ---
 
 ## 🧠 Methodology
 
-1. Enumeration first (always)
-2. Identify attack surface
-3. Exploit manually
-4. Stabilize access
+My standard penetration testing workflow:
+
+1. Reconnaissance (open ports & services)
+2. Enumeration (service-specific analysis)
+3. Attack surface identification
+4. Manual exploitation first (no automation dependency)
 5. Privilege escalation
-6. Document & learn
+6. Documentation and knowledge extraction
 
 ---
 
-## 📈 Roadmap
+## 📈 Current Focus
 
-- [ ] Build custom tools (scanner, enum automation)
-- [ ] eJPT
-- [ ] PNPT
-- [ ] OSCP
+- Building offensive security tools (beyond writeups)
+- Automating reconnaissance workflows
+- Improving attack chaining understanding
+- Advancing toward OSCP-level methodology
 
 ---
 
 ## ⚠️ Disclaimer
 
-All work is performed in legal environments such as Hack The Box.
-
----
-
-## 📫 Contact
-
-- GitHub: https://github.com/r4r7r0x
+All activities and tools are developed strictly for educational purposes in controlled environments such as Hack The Box and similar platforms.
