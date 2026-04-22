@@ -1,23 +1,121 @@
-## Aurora Recon Framework
 
-Automated recon tool for CTF/pentest labs. Authorized use only.
 
+# Aurora Recon Framework
+Automated reconnaissance framework for penetration testing and CTF environments.
+Designed to structure initial enumeration into a repeatable, fast and modular workflow.
+> Authorized use only.
+---
+## Overview
+Aurora automates the early-stage reconnaissance phase:
+- Network discovery (Nmap)
+- Service classification
+- Context-based enumeration modules
+- Structured output for analysis and reporting
+Each scan generates a self-contained workspace with raw outputs and a consolidated report.
+---
 ## Usage
-python3 aurora.py -t <IP> [--fast|--full] [--htb] [--silent]
+```bash
+python3 aurora.py -t <IP> [options]
 
-## Flags
--t / --target     Target IP
---fast            Top 100 ports
---full            All 65535 ports  
---htb             HTB mode (SecLists wordlist, shorter timeout)
---quick           Nmap only, skip modules
---silent          No output (for scripting)
---notes "text"    Add notes to report (repeatable)
--o                Output directory
+⸻
 
-## Output
-aurora_<IP>_<timestamp>/
+Options
+
+Target
+
+-t / --target     Target IP or hostname
+
+Scan modes
+
+--fast            Top 100 ports scan
+--full            Full port range scan (1–65535)
+
+Workflow control
+
+--quick           Run Nmap only (skip post-enumeration modules)
+--silent          Suppress console output (scripting mode)
+
+Environment presets
+
+--htb             Hack The Box mode:
+                  - optimized wordlists (SecLists)
+                  - reduced timeout
+
+Notes / Loot
+
+--notes "text"    Add manual notes to report
+                  (repeatable flag)
+
+Output
+
+-o / --output     Output directory
+
+⸻
+
+Output Structure
+
+Each execution creates an isolated workspace:
+
+aurora_<target>_<timestamp>/
 ├── nmap.txt
 ├── http_<port>.txt
-├── smb.txt / ssh_<port>.txt
+├── smb.txt
+├── ssh_<port>.txt
 └── report.json
+
+⸻
+
+Report Structure
+
+The final report aggregates scan results and manual input:
+
+{
+  "tool": "Aurora v4.3",
+  "target": "10.10.10.10",
+  "mode": "fast",
+  "summary": {
+    "ports": 3,
+    "modules": 2
+  },
+  "loot": {
+    "notes": [
+      "admin panel found at /admin",
+      "anonymous FTP enabled"
+    ],
+    "credentials": [],
+    "interesting": []
+  }
+}
+
+⸻
+
+Design Principles
+
+* Modular service-based enumeration
+* No external dependencies (system tools only)
+* Reproducible output per target
+* Separation between raw data and structured findings
+* Manual analyst input supported via loot system
+
+⸻
+
+Intended Use
+
+* Hack The Box / TryHackMe environments
+* OSCP-style labs
+* Internal lab environments
+* Initial enumeration phase automation
+
+⸻
+
+Disclaimer
+
+This tool is intended for authorized security testing only.
+The author assumes no responsibility for misuse.
+
+⸻
+
+Author
+
+r4r7r0x
+
